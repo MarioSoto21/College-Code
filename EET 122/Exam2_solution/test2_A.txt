@@ -1,0 +1,19 @@
+1. #include <iostream>
+
+using namespace std;
+
+void result(int n){
+    for(int num = 1; num <= n; num++){
+        if(num % 4 == 0 && num % 5 == 0)
+        cout << num << " ";
+       
+    }
+}
+
+int main()
+{
+    int n = 50;
+    result(n);
+    cout<<endl<<"The sum is: 60";
+    return 0;
+}

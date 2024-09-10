@@ -1,0 +1,42 @@
+Methods
+Writing Methods
+Methods are commonly used to break a problem into smaller, manageable pieces. Reasons of using methods:
+- Reducing complexity: divide and conqure
+- Reusing code: avoid repetition of code
+- Maintenance and debugging: smaller methods are easier to debug and understand.
+
+A method is a named set of statements. When we want to execute the statements, we call the method using
+its name.
+
+The methods that are called without an object are static methods. Static methods are also referred to
+ as class methods.
+
+Note:
+Static methods - can call without an object m().
+object methods = must call using an object obj.m().
+
+Writing Static Methods
+There are two steps to writiing and using a static method
+	- Step 1: method definition
+	- Step 2: method call
+
+To define a method:
+	- Method's header (method signature)
+	- Method's body
+
+	public static void main(String args[]) { //Header. public(access modifier), static(non-access modifier), void(return type), main(method name), String args[](formal parameters)
+		System.out.println("Hello World"); // Body
+	}
+Example:
+// Step 1: define a new method named chorus
+public static void chorus() {
+	System.out.println("I'm looking over a four-leaf clover");
+	System.out.println("That I overlooked before");
+}
+
+Whenever you watn to use a method you call it using the method name followed by parentheses. 
+
+// Step 2: call the chorus method
+chorus();
+
+Note: the main method can call the chorus method multiple times to repeat the two linds of the song.

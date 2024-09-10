@@ -1,0 +1,14 @@
+
+#include <iostream>
+using namespace std;
+int main()
+{
+double Values [] = {75, 85, 80, 90, 70};
+cout<<"4 "<<Values [4]<<endl;
+cout<<"3 "<<Values [3]<<endl;
+cout<<"2 "<<Values [2]<<endl;
+cout<<"1 "<<Values [1]<<endl;
+cout<<"0 "<<Values [0]<<endl;
+
+return 0;
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="sotoM"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-09-01 07:37:27 PM"/>
+        <attribute name="created" value="c290b007TEFQVE9QLU01OEFSUFRPOzIwMjItMDktMDE7MDc6MTY6MTcgUE07Mjg5Nw=="/>
+        <attribute name="edited" value="c290b007TEFQVE9QLU01OEFSUFRPOzIwMjItMDktMDE7MDc6Mzc6MjcgUE07MzszMDEx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;height&quot;" newline="True"/>
+            <declare name="h" type="Real" array="False" size=""/>
+            <input variable="h"/>
+            <output expression="&quot;radius&quot;" newline="True"/>
+            <declare name="r" type="Integer" array="False" size=""/>
+            <input variable="r"/>
+            <declare name="v" type="Real" array="False" size=""/>
+            <assign variable="v" expression="3.14*r*r*h"/>
+            <output expression="v" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

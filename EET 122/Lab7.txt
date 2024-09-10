@@ -1,0 +1,27 @@
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int size=6;
+    int p;
+    int marks [size];
+    cout<<"Enter grade points of 6 students: ";
+    cin>>marks[size];
+    int pass[]={p};
+    
+        
+    for(int i = 0; i<size; i++) {
+      if(marks[i]>=60){
+        int p= marks[i];
+      }
+      }
+      
+    int count=0;
+    for(int i=0;i<=i; i++){
+        if(pass[i] != '\0')
+            count++;
+    }
+      cout<<"Number of students passed: ";
+      cout<<"The passing grades are: "<< pass[p];
+}

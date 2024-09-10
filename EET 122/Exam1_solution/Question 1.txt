@@ -1,0 +1,20 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int value;
+    cout<<"Enter the temperature value: ";
+    cin>>value;
+    if(value > 100) {
+        cout<<"Temperature is high"<<endl;
+    }
+    else if(value >70 && value <=100) {
+        cout<<"Temperature is moderate"<<endl;
+    }
+    else {
+        cout<<"Temperature is low"<<endl;
+    }
+    return 0;
+}

@@ -1,0 +1,49 @@
+<!--
+    Ant Script: build.xml
+    
+    Description:
+    This Ant script automates the compilation and execution of the Kosaraju graph.
+-->
+
+<project name="JavaProject" basedir="." default="run">
+
+    <!-- Define properties -->
+    <property name="src.dir" location="src" />
+    <property name="build.dir" location="build" />
+    <property name="main.class" value="src.main.app.Runner" />
+
+    <!-- Define targets -->
+    <target name="clean">
+        <!-- Delete the classes directory -->
+        <delete dir="${build.dir}" />
+    </target>
+
+    <target name="init" depends="clean">
+        <!-- Create the classes directory if it doesn't exist -->
+        <mkdir dir="${build.dir}/classes" />
+    </target>
+
+    <target name="compile" depends="init">
+        <!-- Compile Java files -->
+        <javac srcdir="${src.dir}" destdir="${build.dir}/classes" includeantruntime="false">
+            <classpath>
+                <pathelement path="${build.dir}/classes" />
+            </classpath>
+        </javac>
+    </target>
+
+    <target name="jar" depends="compile">
+        <!-- creates a JAR (Java Archive) -->
+        <jar destfile="${build.dir}/Main.jar" basedir="${build.dir}/classes">
+            <manifest>
+                <attribute name="Main-Class" value="${main.class}" />
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="run" depends="jar">
+        <!-- Run the Java program -->
+        <java jar="${build.dir}/Main.jar" fork="true" />
+    </target>
+
+</project>

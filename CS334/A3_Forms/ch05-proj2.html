@@ -1,0 +1,107 @@
+<!-- Mario Soto -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <title>Chapter 5</title>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="variables-palette-7.css" >   
+   <link rel="stylesheet" href="ch05-proj2.css" />
+</head>
+<body>
+<form method="get" action="http://www.randyconnolly.com/tests/process.php" >
+<fieldset>
+   <legend>Advanced Art Work Search</legend>
+   
+    <div id="searchBox">
+     <input type="search" name="search" placeholder="Search title">
+      <input type="radio" name="subject" value="1">History
+      <input type="radio" name="subject" value="2">Person
+      <input type="radio" name="subject" value="3">Landscape
+   </select> 
+   <select name="filter" id="filter">
+      <option value="0" >Baroque</option>
+      <option value="1">Renaissance</option>
+      <option value="2">Realism</option>
+      <option value="3">Neo-Classicism</option>
+   </select>
+   <button type="submit" value="Submit">Filter</button>
+    </div>  
+     
+    <div id="settingsBox">
+      <select name="actions" id="actions">
+         <option value="1">Archive</option>
+         <option value="2">Edit</option>
+         <option value="3">Delete</option>
+         <option value="4">Collection</option>
+     </select>
+     <button type="submit" value="Submit">Apply to All</button>
+    </div>
+    <div id="paintingBox">
+    <table>
+      <div><caption>Paintings</caption></div>
+      
+         <thead>
+            <tr>
+              <th>Title</th>
+              <th>Artist</th>
+              <th>Year</th>
+              <th>Genre</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input type="checkbox" name="index[]" value="10"><img src="images/125010.jpg" width="100" height="100">
+               Portrait of Alida Civistina Assink</td>
+              <td>Kruseman, Jan</td>
+              <td> 1833</td>
+              <td> Realsim</td>
+              <td><img class="edit" src="images/edit.png" alt=""> <img class="archive" src="images/archive.png" alt="">
+               <img class="delete" src="images/delete.png" alt=""></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="index[]" value="20"><img src="images/125020.jpg" width="100" height="100">
+               Portrait of William II, King of the Netherlands</td>
+              <td>Kruseman, Jan</td>
+              <td>1839</td>
+              <td>Realism</td>
+              <td><img class="edit" src="images/edit.png" alt=""> <img class="archive" src="images/archive.png" alt="">
+               <img class="delete" src="images/delete.png" alt=""><</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="index[]" value="30"><img src="images/127010.jpg" width="100" height="100">
+               Three girls from the Amsterdam Orphanage</td>
+              <td>Schwartze, Therese</td>
+              <td>1885</td>
+              <td>1670</td>
+              <td><img class="edit" src="images/edit.png" alt=""> <img class="archive" src="images/archive.png" alt="">
+               <img class="delete" src="images/delete.png" alt=""></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="index[]" value="40"><img src="images/128010.jpg" width="100" height="100">
+               The Windmill at Wijk bij Duurstede</td>
+              <td>Ruisdael, Jacob van</td>
+              <td>1670</td>
+              <td>Dutch Golden Age</td>
+              <td><img class="edit" src="images/edit.png" alt=""> <img class="archive" src="images/archive.png" alt="">
+               <img class="delete" src="images/delete.png" alt=""></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="index[]" value="50"><img src="images/130020.jpg" width="100" height="100">
+               Morning Ride Along the Beach</td>
+              <td>Mauve, Arton</td>
+              <td>1871</td>
+              <td>Realism</td>
+              <td><img class="edit" src="images/edit.png" alt=""> <img class="archive" src="images/archive.png" alt="">
+               <img class="delete" src="images/delete.png" alt=""></td>
+            </tr>
+          </tbody>
+        
+    </table>
+   </div>
+    </div> 
+</fieldset>  
+</form>
+</body>
+</html>

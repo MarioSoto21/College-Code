@@ -1,0 +1,19 @@
+#include <iostream>
+#include<cstdlib>
+using namespace std;
+int main() {
+	int min;
+    cout<<"Enter the total number of minutes: ";
+    cin>>min;
+	int h, m, s;
+	
+	h = (min/60); 
+	
+	m = (min -(60*h));
+	
+	s = 15 + rand() % 30;
+	
+	cout<<"The total amount of time is "<<h<<" hour,"<<m<<" minutes,"<<s<<" seconds";
+
+	return 0;
+}

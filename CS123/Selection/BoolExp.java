@@ -1,0 +1,14 @@
+public class BoolExp {
+		public static void main(String argv[]) {
+			boolean isRaining = true;
+			boolean isMoney = false;
+			
+			System.out.println(isRaining); // true
+			System.out.println(!isRaining); // false
+			System.out.println(isMoney); // false
+			System.out.println(!isMoney); // true
+			System.out.println(5 == 7); // false
+			System.out.println(!(5 == 7)); // true
+
+		}
+}

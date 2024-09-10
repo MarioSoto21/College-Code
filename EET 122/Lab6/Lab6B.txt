@@ -1,0 +1,32 @@
+#include <iostream>
+
+using namespace std;
+
+void Print_instructions();
+float Cal_area(float radius);
+float Cal_circumference(float radius);
+
+int main(){
+ float radius;
+ Print_instructions();
+ 
+ cout<<"Enter the value of radius: ";
+    cin>>radius;
+   float area = Cal_area(radius);
+    float circumference = Cal_circumference(radius);
+    
+    cout<<"The area of the circle: "<<area<<endl;
+
+    cout<<"The circumference of the circle is: "<<circumference<<endl;
+}
+void Print_instructions(){
+    cout<<"This program will calculate the area and circumference of a circle"<<endl;
+    cout<<"You can insert the value of the radius to check area and circumference\n"<<endl;
+}
+float Cal_area(float radius){
+    return 3.14*radius*radius;
+}
+float Cal_circumference(float radius){
+    return 2*3.14*radius;
+}
+

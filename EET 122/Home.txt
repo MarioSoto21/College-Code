@@ -1,0 +1,30 @@
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a, b;
+    cout<<"Enter odd integer in the range 1 - 15: ";
+    cin>>a;
+    
+    cout<<"Enter odd integer (base 2> base1) in the range of 3 - 17: ";
+    cin>>b;
+    
+  
+    string symbol;
+    cout<<"Please enter a printable character to draw tapezoid: ";
+    cin>> symbol;
+    
+    
+   for (int row = 0; row < b/2; ++row) {
+      for (int col = b - row; col > 0; --col) {
+         cout << " ";
+      }
+      for (int col = 0; col < (a + 2* row); ++col) {
+         cout << symbol;
+      }
+      cout << endl;
+   }
+}

@@ -1,0 +1,32 @@
+
+#include<iostream>
+using namespace std;
+
+void Count(string str)
+{
+    int a = 0, b = 0, c = 0;
+    for (int i = 0; i < str.length(); i++)
+    {
+        if (str[i] == 'a')
+            a++;
+        else if (str[i] == 'e')
+            b++;
+        else if (str[i] == 'i' )
+            c++;
+    
+    }
+    cout << "Number of 'a' on the line: " << a << endl;
+    cout << "Number of 'e' on the line: " << b << endl;
+    cout << "Number of 'i' on the line: " << c << endl;
+    
+}
+ 
+// Driver function
+int main()
+{
+    string str;
+    cout<<"Enter a line of text; ";
+    getline(cin, str);
+    Count(str);
+    return 0;
+}

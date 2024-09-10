@@ -1,0 +1,6 @@
+3.
+a)The result is: 130
+b)The result is: 0
+
+4. 
+10, 6, 2

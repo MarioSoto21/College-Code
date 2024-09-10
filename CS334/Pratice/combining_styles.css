@@ -1,0 +1,25 @@
+div {
+    width: 50px;
+    border: 1px solid gray;
+
+}
+p {
+    text-align: center;
+
+}
+#first {
+    background-color: seagreen;
+}
+
+.circle {
+    background-color: royalblue;
+    border-radius: 50%;
+}
+.orange {
+    background-color: orange;
+}
+div {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content:;
+}

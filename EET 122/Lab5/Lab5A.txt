@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n, i, temp, range;
+    double sum = 0;
+    double average = 0;
+    
+    cout << "Enter the Value of n : ";
+    cin >> n;
+    
+    for (i = 0; i < n; i++){
+    
+        cout << "Enter the values: ";
+        cin >> temp;
+        sum = sum+ temp;
+    }
+
+    average = sum / n;
+
+    cout << "Sum: " << sum<< " Average: " << average << endl;
+ 
+
+    return 0;
+}

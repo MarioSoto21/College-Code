@@ -1,0 +1,1 @@
+alert("A messae from an external file")

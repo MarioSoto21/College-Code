@@ -1,0 +1,128 @@
+
+* {
+   box-sizing: border-box;
+}
+body, section, header, div, p, h1, h2, h3, ul, li {
+   margin: 0;
+   padding: 0;
+}
+body {
+   font-family: 'Open Sans', sans-serif;
+   box-sizing: border-box;
+   background-color: #e4e7eb;
+   font-weight: 300;
+}
+header {
+   margin-left: 20px;
+}
+h1 { 
+   text-align: center;
+   font-weight: 600;
+   font-size: 42px;
+   padding: 10px 0;
+}
+
+/* add styles here */
+body{
+   padding: 40px;
+}
+section{
+   width: 910px;
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.column{
+   display: inline-block;
+   width: 300px;
+   background-color: white;
+   text-align: center;
+}
+.featured{
+   background-color: #2f4f4f;
+   list-style-type: none;
+   color: white;
+
+}
+li {
+   list-style-type: none;
+   padding: 5px;
+}
+section li{
+   font-weight: 300;
+}
+section span{
+   font-weight: 800;
+   font-size: 18px;
+}
+section li:nth-child(even){
+   background-color: rgba(57, 59, 64, 0.35);
+}
+#confidence {
+   width: 910px;
+   background-size: 24px;
+   padding: 20px;
+   background-color: #2f4f4f;
+   color: white;
+   font-size: 18px;
+   font-weight: 300;
+   margin-top: 20px;
+   
+}
+#confidence li{
+   margin-left: 0px;
+   background-image: url(checkmark.svg) ;
+   background-repeat:no-repeat;
+   background-position: 0.4px;
+   padding-left: 2em;
+   background-size: 20px;
+}
+.column a{
+   background-color:#3a6ba5;
+   font-weight: 600;
+   font-size: 18px;
+   text-decoration: none;
+   color: white; 
+   padding-left: 100px;
+   padding-right: 100px;
+   padding-top: 5px;
+   text-align: center;
+   border-radius: 5px;
+   
+
+}
+.column a:hover{
+   background-color: #437cbf;
+   color: white;
+   
+}
+.column div{
+   padding-top:30px;
+   padding-bottom: 30px;
+   
+}
+.price {
+   font-weight: 800;
+   font-size: 36px;
+   padding: 5px;
+}
+.price span{
+   font-size: 18px;
+   font-weight: 300;
+}
+.free{
+   background-color: #5bb189;
+}
+.standard{
+   background-color: #4b0082;
+}
+.professional{
+   background-color: #ec632a;
+}
+h3{
+   font-size: 24px;
+   font-weight: 600;
+}
+h2{
+   font-weight: 600;
+   font-size: 24px;
+}
+

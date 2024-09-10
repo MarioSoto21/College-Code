@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1645481011 source:c:\eet 122\lab3\lab3a\main.cpp
+	<iostream>
+	<math.h>
+	<stdio.h>
+

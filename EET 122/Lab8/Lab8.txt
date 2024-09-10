@@ -1,0 +1,37 @@
+#include<bits/stdc++.h>
+using namespace std;
+const int N = 4;
+	void printArray(int result[], int no_of_rows) {
+		for (int i = 1; i < no_of_rows; i++) {
+			cout<< result[i]<<"\n";
+		}
+
+	}
+	void maxelement(int no_of_rows, int arr[][N]) {
+		int i = 0;
+
+		int max = 0;
+		int result[no_of_rows];
+		while (i < no_of_rows) {
+			for (int j = 0; j < N; j++) {
+				if (arr[i][j] > max) {
+					max = arr[i][j];
+				}
+			}
+			result[i] = max;
+			max = 0;
+			i++;
+       
+		}
+		cout<<"The largest element at second row is: ";
+        printArray(result,no_of_rows);
+	}
+	int main()
+	{
+		int arr[][N] = { 
+        { 80, 90, 85, 55 },
+        { 75, 85, 80, 60 },
+    { 90, 95, 90, 60 },
+    };
+		maxelement(2, arr);
+	}

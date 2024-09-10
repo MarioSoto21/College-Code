@@ -1,0 +1,60 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a, b, result;
+    cout<<"     Name: Mario Soto"<<endl;
+    cout<<"     Course: EET 122"<<endl;
+    cout<<" University: Eastern New Mexico University"<<endl;
+    
+    cout<<"Enter an integer between 0 to 50, inclusively: "<<endl;
+        cin>>a;
+        cout<<"Enter another integer between -5 and 20, inclusively: "<<endl;
+        cin>>b;
+        
+    do {
+        char input;
+        cout<<"Enter the arithmetic operation (+, -, *, /, or %) you wish to perform: "<<endl;
+        cin>>input;
+        if (input =='+') {
+            result = a+b;
+            cout<<"Integer Addition: "<<" "<<a<<" + "<<b<< " = " <<result<<endl;
+        }
+        else if (input =='-') {
+            result = a-b;
+            cout<<"Integer Subtraction: "<<" "<<a<<" - "<<b<< " = " <<result<<endl;
+        }
+        else if (input =='*') {
+            result = a*b;
+            cout<<"Integer Multiplication: "<<" "<<a<<" * "<<b<< " = " <<result<<endl;
+        }
+        else if (input =='/') {
+            result = a/b;
+            cout<<"Integer Division: "<<" "<<a<<" / "<<b<< " = " <<result<<endl;
+        }
+        else if (input =='%') {
+            result = a%b;
+            cout<<"Integer Modulus: "<<" "<<a<<" % "<<b<< " = " <<result<<endl;
+        }
+        else{
+        cout<<"Invalid operation"<<endl;
+        }
+        break;
+        
+        }
+        while(a<=50 && a>=0 && b >= -5 && b<=20); 
+       
+           if(result>0) {
+            cout<<"The result is positive"<<endl;
+        }
+        else if(result<0){
+           cout<<"The result is negative"<<endl; 
+        }
+        else
+        cout<<"The results is zero"<<endl;
+       
+    return 0;
+
+}

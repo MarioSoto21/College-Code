@@ -1,0 +1,16 @@
+#include <iostream>
+#include <math.h>
+#include <stdio.h>
+using namespace std;
+int main()
+{
+double area, a, h;
+cout<< "Enter the length of the base edge: ";
+cin >> a;
+cout << "Enter the height of the prism: ";
+cin >> h;
+double a2= pow(a,2);
+area= 6*a*h+(3*sqrt(3)*a2);
+cout<<"The area of the hexagonal prism:"<<area;
+return 0;
+}

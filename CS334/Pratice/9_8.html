@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Two different ways of using a button -->
+    <input type="submit" id="btn">
+
+    <script>
+        // // Define Event handler
+        function simpleHandler(){
+            alert("buttonn was clicked");
+        }
+        // // Register event Handler
+        const btn = document.querySelector("#btn");
+        btn.addEventListener("Clicke", simpleHandler)
+    </script>
+</body>
+</html>

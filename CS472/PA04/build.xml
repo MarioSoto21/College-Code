@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="JaCoCoTest" basedir="." default="rebuild" xmlns:jacoco="antlib:org.jacoco.ant">
+
+    <!-- Properties -->
+    <property name="src.dir" location="src"/>
+    <property name="test.dir" location="test"/>
+    <property name="build.dir" location="build"/>
+    <property name="main.class" value="src.main.app.Runner" />
+    <property name="lib.dir" location="lib"/>
+    <property name="junit.jar" location="${lib.dir}/junit-4.13.2.jar"/>
+    <property name="hamcrest.jar" location="${lib.dir}/hamcrest-1.3.jar"/>
+	<property name="jacoco.jar" location="${lib.dir}/jacocoant.jar"/>
+
+    <!-- Path Setup -->
+    <path id="classpath">
+        <pathelement location="${build.dir}"/>
+        <pathelement location="${src.dir}"/>
+        <pathelement location="${test.dir}"/>
+        <fileset dir="${lib.dir}" includes="*.jar"/>
+    </path>
+
+	<!-- Task Definitions -->
+	<taskdef uri="antlib:org.jacoco.ant" resource="org/jacoco/ant/antlib.xml">
+			<classpath path="${jacoco.jar}"/>
+		</taskdef>
+
+    <target name="clean">
+        <!-- Delete the classes directory -->
+        <delete dir="${build.dir}" />
+    </target>
+
+     <!-- Create build directory -->
+    <target name="makedir" depends="clean">
+        <mkdir dir="${build.dir}"/>
+    </target>
+
+    <target name="compile" depends="makedir">
+        <mkdir dir="${build.dir}"/>
+        <javac srcdir="${src.dir}:${test.dir}" destdir="${build.dir}" includeantruntime="false" debug="true">
+            <classpath>
+                <path refid="classpath"/>
+                <pathelement location="${main.class}"/>
+            </classpath>
+        </javac>
+    </target>
+
+     <!-- Run JUnit tests and collect coverage data -->
+    <target name="test" depends="compile">
+        <jacoco:coverage destfile="${build.dir}/jacoco.exec">
+            <junit fork="true" forkmode="once" printsummary="true">
+                <classpath>
+                    <path refid="classpath"/>
+                    <pathelement location="${junit.jar}"/>
+                    <pathelement location="${hamcrest.jar}"/>
+                </classpath>
+                <batchtest todir="${build.dir}">
+                    <fileset dir="${build.dir}">
+                        <include name="test/TestCases.class"/>
+                        <include name="test/View.class"/>
+                        <include name="test/Runner.class"/>
+                    </fileset>
+                </batchtest>
+            </junit>
+        </jacoco:coverage>
+    </target>
+	
+	 <!-- Create coverage report -->
+    <target name="report" depends="test">
+        <jacoco:report>
+            <!-- Provide collected execution data -->
+            <executiondata>
+                <file file="${build.dir}/jacoco.exec" />
+            </executiondata>
+
+            <!-- Specify class files and source files -->
+            <structure name="JaCoCo Ant">
+                <classfiles>
+                    <fileset dir="${build.dir}"/>
+                </classfiles>
+                <sourcefiles encoding="UTF-8">
+                    <fileset dir="${src.dir}" />
+                </sourcefiles>
+            </structure>
+
+            <!-- Specify the format of the reports -->
+            <html destdir="${build.dir}/site/jacoco" />
+            <csv destfile="${build.dir}/site/jacoco/report.csv" />
+            <xml destfile="${build.dir}/site/jacoco/report.xml" />
+        </jacoco:report>
+    </target>
+
+    <!-- Rebuild the project -->
+    <target name="rebuild" depends="clean, makedir, compile, test, report" />
+	
+    </project>

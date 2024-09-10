@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="sotoM"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-09-01 07:57:33 PM"/>
+        <attribute name="created" value="c290b007TEFQVE9QLU01OEFSUFRPOzIwMjItMDktMDE7MDc6Mzc6MzAgUE07Mjg5NQ=="/>
+        <attribute name="edited" value="c290b007TEFQVE9QLU01OEFSUFRPOzIwMjItMDktMDE7MDc6NTc6MzMgUE07MjszMDA5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;How many friends are their?&quot;" newline="True"/>
+            <declare name="f" type="Integer" array="False" size=""/>
+            <input variable="f"/>
+            <declare name="Bill" type="Integer" array="False" size=""/>
+            <assign variable="bill" expression="f*15"/>
+            <output expression="&quot;total bill $&quot; &amp; bill" newline="True"/>
+            <declare name="splitBill" type="Real" array="False" size=""/>
+            <assign variable="splitBill" expression="bill/f"/>
+            <declare name="tip" type="Real" array="False" size=""/>
+            <assign variable="tip" expression="bill*.15"/>
+            <declare name="splitTip" type="Real" array="False" size=""/>
+            <assign variable="splitTip" expression="tip/f"/>
+            <output expression="&quot;Total tip: $&quot; &amp; tip" newline="True"/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <assign variable="total" expression="bill+tip"/>
+            <output expression="&quot;Total cost: $&quot; &amp; total" newline="True"/>
+            <declare name="per" type="Real" array="False" size=""/>
+            <assign variable="per" expression="splitTip+splitBill"/>
+            <output expression="&quot;Amount each person pays: $&quot; &amp; per" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

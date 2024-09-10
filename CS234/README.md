@@ -1,0 +1,2 @@
+# Solve-a-equation-from-a-book-big-java
+The dew point temperature Td can be calculated (approximately) from the relative humidity RH and the actual temperature T by T bfTRH afTRH fTRH aT bT RH d = ⋅ () − () () = ⋅ + + () , , ,l n where a = 17.27 and b = 237.7° C. Write a program that reads the relative humidity (between 0 and 1) and the temperature (in degrees C) and prints the dew point value. Use the Java function log to compute the natural logarithm. 
