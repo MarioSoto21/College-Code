@@ -1,0 +1,16 @@
+import turtle
+draw=turtle.Turtle()
+draw.right(90)
+draw.forward(350)
+draw.left(90)
+draw.forward(400)
+draw.left(90)
+draw.forward(350)
+draw.left(90)
+draw.forward(400)
+draw.right(90)
+
+draw.right(45)
+draw.forward(285)
+draw.right(90)
+draw.forward(285)
