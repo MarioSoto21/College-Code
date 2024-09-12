@@ -1,0 +1,37 @@
+<project name="PA02" basedir="." default="run">
+
+    <!-- Define properties -->
+    <property name="src.dir" value="src"/>
+    <property name="build.dir" value="classes"/>
+    <property name="main.class" value="src.main.app.Runner"/>
+
+    <!-- Define paths to external libraries -->
+    <path id="lib.path">
+        <fileset dir="lib">
+            <include name="**/*.jar"/> 
+        </fileset>
+    </path>
+
+    <!-- Define targets -->
+    <target name="init">
+        <mkdir dir="${build.dir}"/>
+    </target>
+
+    <target name="compile" depends="init">
+        <javac srcdir="${src.dir}" destdir="${build.dir}" includeantruntime="false">
+            <classpath>
+                <path refid="lib.path"/> 
+                <pathelement location="${build.dir}"/>
+            </classpath>
+        </javac>
+    </target>
+
+    <target name="run" depends="compile">
+        <java classname="${main.class}" classpath="${build.dir}:${toString:lib.path}"/>
+    </target>
+
+    <target name="clean">
+        <delete dir="${build.dir}"/>
+    </target>
+
+</project>

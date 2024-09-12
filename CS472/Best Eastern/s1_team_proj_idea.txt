@@ -1,0 +1,6 @@
+.public class team {}:
+Caleb Parten
+ David Schmith
+ Mario Soto
+ Noah Caulfield
+ Theodoro Leyva (Teddy)

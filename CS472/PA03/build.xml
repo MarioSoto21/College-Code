@@ -1,0 +1,62 @@
+<project name="project-root" default="test" basedir=".">
+
+    <!-- Properties -->
+    <property name="src.dir" value="src/main"/>
+    <property name="build.dir" value="build"/>
+    <property name="classes.dir" value="${build.dir}/classes"/>
+    <property name="lib.dir" value="lib"/>
+    <property name="test.dir" value="src/test"/>
+    <property name="test.classes.dir" value="${build.dir}/test-classes"/>
+    <!-- Update junit.jar to point to the JUnit 4 JAR file -->
+    <property name="junit.jar" value="${lib.dir}/junit-4.13.2.jar"/> 
+    
+    <!-- Create directories -->
+    <target name="init">
+        <mkdir dir="${build.dir}"/>
+        <mkdir dir="${classes.dir}"/>
+        <mkdir dir="${test.classes.dir}"/>
+    </target>
+    
+    <!-- Compile main -->
+    <target name="compile" depends="init">
+        <javac srcdir="${src.dir}" destdir="${classes.dir}" includeantruntime="false"/>
+    </target>
+    
+    <!-- Compile test -->
+    <target name="compile-test" depends="compile">
+        <javac srcdir="${test.dir}" destdir="${test.classes.dir}" includeantruntime="false">
+            <classpath>
+                <pathelement path="${classes.dir}"/>
+                <!-- Include JUnit 4 JAR file -->
+                <pathelement path="${junit.jar}"/> 
+            </classpath>
+        </javac>
+    </target>
+    
+    <!-- Run main -->
+    <target name="run" depends="compile">
+        <java classname="src.main.app.Runner" classpath="${classes.dir}"/>
+    </target>
+    
+    <!-- Run test -->
+    <target name="test" depends="compile-test">
+        <junit printsummary="yes" haltonfailure="no">
+            <classpath>
+                <pathelement path="${classes.dir}"/>
+                <pathelement path="${test.classes.dir}"/>
+                <!-- Include JUnit 4 JAR file -->
+                <pathelement path="${junit.jar}"/>
+            </classpath>
+            <formatter type="plain"/>
+            <batchtest>
+                <fileset dir="${test.classes.dir}" includes="**/*Test.class"/>
+            </batchtest>
+        </junit>
+    </target>
+    
+    <!-- Clean -->
+    <target name="clean">
+        <delete dir="${build.dir}"/>
+    </target>
+    
+</project>
