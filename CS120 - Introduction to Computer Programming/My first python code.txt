@@ -1,0 +1,3 @@
+print("I love programming!")
+print("How are you today?")
+print("Welcome to Python!")
