@@ -1,1 +1,0 @@
-This is to be ran on a backend server with a public (or proxied) IP in order to make the rest of the app work.
