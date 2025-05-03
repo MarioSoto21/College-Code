@@ -1,0 +1,65 @@
+<resources>
+
+    <!-- Discord-like Colors -->
+    <color name="discord_black">#23272A</color>
+    <color name="discord_gray">#2C2F33</color>
+    <color name="discord_dark_gray">#202225</color>
+    <color name="discord_blue">#7289DA</color>
+
+    <!-- Earthy Greens -->
+    <color name="turtle_green_200">#A8D08D</color>
+    <color name="turtle_green_500">#6B8E23</color>
+    <color name="turtle_green_700">#4B6F44</color>
+    <color name="turtle_green_800">#3C5A34</color>
+    <color name="turtle_green_900">#2E4A27</color>
+
+    <!-- Shell Browns -->
+    <color name="shell_brown_200">#D2B48C</color>
+    <color name="shell_brown_500">#8B4513</color>
+    <color name="shell_brown_700">#5C4033</color>
+
+    <!-- Turtle Accent Colors -->
+    <color name="turtle_accent">#98C379</color>
+
+    <!-- Brighter Green -->
+    <color name="turtle_green_600">#4F8A45</color>
+
+    <!-- Grays for Depth -->
+    <color name="gray_200">#BDBDBD</color>
+    <color name="dark_gray">#1C1C1C</color>
+
+    <!-- Black/White -->
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+
+    <!-- Text Colors -->
+    <color name="colorTextLight">#000000</color>
+    <color name="colorTextDark">#FFFFFF</color>
+    <color name="colorTextHigh">#26FF00</color>
+    <color name="colorTextLightDark">#333333</color>
+    <color name="hintTextColorLight">#808080</color>
+    <color name="hintTextColorDark">#FFFFFF</color>
+
+    <!-- Standard Colors -->
+    <color name="colorPrimary">#6B8E23</color>
+    <color name="colorPrimaryDark">#4B6F44</color>
+    <color name="colorAccent">#98C379</color>
+
+    <color name="colorBackground">#FFFFFF</color>
+
+    <color name="colorOnPrimary">#FFFFFF</color>
+    `
+
+    <color name="sentMessageLight">#80a113</color>
+    <color name="receivedMessageLight">#1dc20e</color>
+
+    <color name="sentMessageDark">#80a113</color>
+    <color name="receivedMessageDark">#1dc20e</color>
+
+    <color name="sentMessageHighContrast">#004900</color>
+    <color name="receivedMessageHighContrast">#0C380C</color>
+
+
+    <color name="receivedMessage">#ccff24</color>
+    <color name="sentMessage">#80a113</color>
+    </resources>
